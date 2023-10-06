@@ -12,8 +12,6 @@ import com.example.singlemoduleapp.ui.theme.ComposeDestinationsTheme
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import com.google.accompanist.navigation.material.ModalBottomSheetLayout
 import com.google.accompanist.navigation.material.rememberBottomSheetNavigator
-import com.ramcosta.composedestinations.DestinationsNavHost
-import com.ramcosta.composedestinations.animations.rememberAnimatedNavHostEngine
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalAnimationApi::class)
@@ -30,11 +28,15 @@ class MainActivity : ComponentActivity() {
                     bottomSheetNavigator = bottomSheetNavigator,
                     sheetShape = RoundedCornerShape(16.dp),
                 ) {
+
+                    // TODO Erstelle einen DestinationsNavHost mit AppRootNavGraph als start NavGraph
+
+                    /*
                     DestinationsNavHost(
-                        navGraph = NavGraphs.appRoot,
-                        engine = rememberAnimatedNavHostEngine(),
-                        navController = navController,
+                        navGraph = NavGraphs.appRoot
                     )
+
+                     */
                 }
             }
         }

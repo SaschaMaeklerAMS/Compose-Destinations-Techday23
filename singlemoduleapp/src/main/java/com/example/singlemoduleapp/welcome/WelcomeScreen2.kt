@@ -5,21 +5,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.singlemoduleapp.NavGraphs
-import com.example.singlemoduleapp.destinations.EnterParameterScreenDestination
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-@WelcomeNavGraph
-@Destination
+// TODO Mache diesen Screen zu einer Destination im WelcomeNavGraph
+
 @Composable
-fun WelcomeScreen2(navigator: DestinationsNavigator) {
+fun WelcomeScreen2() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -29,20 +24,6 @@ fun WelcomeScreen2(navigator: DestinationsNavigator) {
         Text(text = "WelcomeScreen 2")
 
         Spacer(modifier = Modifier.height(30.dp))
-
-        Button(onClick = {
-            navigator.navigate(NavGraphs.home) // or directly HomeScreenDestination
-        }) {
-            Text(text = "Take me Home (Country Roads...)")
-        }
-
-        Spacer(modifier = Modifier.height(30.dp))
-
-        Button(onClick = {
-            navigator.navigate(EnterParameterScreenDestination)
-        }) {
-            Text(text = "Fast Track -> Enter Parameter Screen")
-        }
     }
 }
 
