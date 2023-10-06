@@ -14,7 +14,7 @@ import com.example.singlemoduleapp.home.HomeNavGraph
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.spec.DestinationStyle
 
-@Destination(style = DestinationStyle.Dialog::class)
+// TODO Show as Dialog
 @Composable
 @HomeNavGraph
 fun Dialog() {
