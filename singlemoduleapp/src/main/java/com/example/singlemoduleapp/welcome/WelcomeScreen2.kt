@@ -12,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.singlemoduleapp.NavGraphs
-import com.example.singlemoduleapp.destinations.EnterParameterScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -34,14 +33,6 @@ fun WelcomeScreen2(navigator: DestinationsNavigator) {
             navigator.navigate(NavGraphs.home) // or directly HomeScreenDestination
         }) {
             Text(text = "Take me Home (Country Roads...)")
-        }
-
-        Spacer(modifier = Modifier.height(30.dp))
-
-        Button(onClick = {
-            navigator.navigate(EnterParameterScreenDestination)
-        }) {
-            Text(text = "Fast Track -> Enter Parameter Screen")
         }
     }
 }

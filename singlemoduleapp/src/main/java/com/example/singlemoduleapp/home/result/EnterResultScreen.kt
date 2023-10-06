@@ -18,12 +18,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.singlemoduleapp.home.HomeNavGraph
 import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.result.ResultBackNavigator
 
 @HomeNavGraph
 @Destination
 @Composable
-fun EnterResultScreen(resultNavigator: ResultBackNavigator<String>) {
+fun EnterResultScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -40,7 +39,7 @@ fun EnterResultScreen(resultNavigator: ResultBackNavigator<String>) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {
-            resultNavigator.navigateBack(result = result)
+            // TODO add result to ResultBackNavigator and navigate back
         }) {
             Text(text = "Submit Result (navigate back)")
         }
