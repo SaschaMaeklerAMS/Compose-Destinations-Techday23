@@ -10,10 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.singlemoduleapp.home.HomeNavGraph
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.spec.DestinationStyleBottomSheet
 
-@Destination(style = DestinationStyleBottomSheet::class)
+// TODO show as bottomsheet
 @Composable
 @HomeNavGraph
 fun BottomSheet() {

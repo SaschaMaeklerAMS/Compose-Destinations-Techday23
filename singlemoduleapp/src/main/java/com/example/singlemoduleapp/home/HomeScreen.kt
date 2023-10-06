@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.singlemoduleapp.destinations.BottomSheetDestination
 import com.example.singlemoduleapp.destinations.DialogDestination
 import com.example.singlemoduleapp.destinations.EnterParameterScreenDestination
 import com.example.singlemoduleapp.destinations.ResultScreenDestination
@@ -57,7 +56,7 @@ fun HomeScreen(navigator: DestinationsNavigator) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(onClick = {
-            navigator.navigate(BottomSheetDestination)
+            // TODO open bottom sheet
         }) {
             Text(text = "BottomSheet")
         }
